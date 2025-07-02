@@ -19,12 +19,22 @@ import FileUpload3D from "../CraftsmanComponents/FileUpload";
 import CustomCursorCards from "../CraftsmanComponents/Tip";
 import GradientBackground from "../CraftsmanComponents/Gradientbg";
 
+import Testimonials from "../CraftsmanComponents/ScrollingImages";
+
+import scrollingcode from "../code/Scrollingcode";
+
+
 import AccordionCode from "../code/Accordion";
 import KeyboardCode from "../code/KeyboardCode";
 import SpaceParticlesCode from "../code/StarsCode";
 import HoverCode from "../code/HoverCode";
 import NavbarCode from "../code/NavbarCode";
 import Carousel from "../code/CarouselCode";
+
+
+
+
+
 import ScrollRollCode from "../code/ScrollRollCode";
 import VolCode from "../code/VolCOde";
 import GradientbgCode from "../code/GradientbgCode";
@@ -36,6 +46,8 @@ import MaskCode from "../code/MaskCode";
 import d from "../code/3d";
 import TipCode from "../code/TipCode";
 import CardStackCode from "../code/CardStackCode";
+import AuroraParticles from "../CraftsmanComponents/ShimmerRing";
+import ShimmerCode from "../code/ShimmerCode";
 
 // Example previews
 //  for components
@@ -43,6 +55,12 @@ const components = {
   Accordion: (
    <Accordion/>
    
+  ),
+  ShimmerRing:(
+    <AuroraParticles/>
+  ),
+  ScrollingImages:(
+    <Testimonials/>
   ),
   Keyboard: (
     <Keyboard/>
@@ -106,7 +124,11 @@ const components = {
 const componentCodes = {
   Accordion: AccordionCode,
 
+  ShimmerRing:ShimmerCode,
+
   Keyboard: KeyboardCode,
+
+  ScrollingImages:scrollingcode,
 
   Stars: SpaceParticlesCode,
 

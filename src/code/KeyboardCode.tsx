@@ -8,13 +8,13 @@ const Keyboard: React.FC = () => {
       'esc', 'F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7', 'F8', 'F8', 'F10', 'F11', 'F12', 'touch'
     ],
     [
-      '\` ~', '1 !', '2 @', '3 #', '4 \$', '5 %', '6 ^', '7 &', '8 *', '9 (', '0 )', '- _', '= +', 'delete'
+      '\` ~', '1 !', '2 @', '3 #', '4 $', '5 %', '6 ^', '7 &', '8 *', '9 (', '0 )', '- _', '= +', 'delete'
     ],
     [
       'tab', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', '[ {', '] }', '\\\\ |'
     ],
     [
-      'caps lock', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', '; :', "' \\"", 'return'
+      'caps lock', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', '; :', '\\' "', 'return'
     ],
     [
       'shift', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', ', <', '. >', '/ ?', 'shift'
@@ -50,7 +50,7 @@ const Keyboard: React.FC = () => {
 
   return (
     <div className="bg-black w-full min-h-screen flex items-center justify-center px-4">
-      <div className="bg-[#1a1a1a] p-4 rounded-2xl shadow-inner  w-full max-w-[1000px]">
+      <div className="bg-[#1a1a1a] p-4 rounded-2xl shadow-inner w-full max-w-[1000px]">
         <div className="flex flex-col gap-2 w-full">
           {rows.map((row, rowIndex) => (
             <div key={rowIndex} className="flex gap-2 w-full">
@@ -58,14 +58,20 @@ const Keyboard: React.FC = () => {
                 <div
                   key={keyIndex}
                   className={clsx(
-                    'h-[50px] text-white text-sm flex items-center justify-center rounded-md  bg-black/90 backdrop-blur-md',
+                    'h-[50px] text-white text-sm flex items-center justify-center rounded-md bg-black/90 backdrop-blur-md',
                     getKeyFlex(key),
-                    'shadow-[0_0_10px_rgba(255,255,255,0.3)] hover:cursor-pointer hover:shadow-[0_0_15px_rgba(255,255,255,0.5)] transition-shadow duration-200'
+                    'shadow-[0_4px_8px_rgba(255,255,255,0.15)]',
+                    'hover:shadow-[inset_0_2px_4px_rgba(255,255,255,0.3)]',
+                    'hover:translate-y-[2px]',
+                    'hover:cursor-pointer',
+                    'transition duration-150 ease-in-out'
                   )}
                 >
                   {key.includes('arrow') ? (
                     <span>
-                      {key === 'arrow-up' ? '↑' : key === 'arrow-down' ? '↓' : key === 'arrow-left' ? '←' : '→'}
+                      {key === 'arrow-up' ? '↑' :
+                        key === 'arrow-down' ? '↓' :
+                        key === 'arrow-left' ? '←' : '→'}
                     </span>
                   ) : key === 'space' ? '' : key}
                 </div>
@@ -78,6 +84,7 @@ const Keyboard: React.FC = () => {
   );
 };
 
-export default Keyboard
+export default Keyboard;
 `;
+
 export default KeyboardCode;

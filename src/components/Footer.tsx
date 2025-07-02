@@ -166,7 +166,7 @@ const Footer = () => {
               vilulgupta2802@gmail.com
             </motion.span>
           </motion.p>
-
+<a href="https://github.com/vipulgupta28/UI-library" target="_blank" rel="noopener noreferrer">
             <motion.p variants={itemVariants}>
             <strong>Github repo</strong> <br />
             <motion.span
@@ -178,10 +178,14 @@ const Footer = () => {
               }}
               transition={{ duration: 0.2 }}
             >
-              www.github.com/vipulgupta28/UI
+              www.github.com/vipulgupta28/UI-library
             </motion.span>
+            
           </motion.p>
           
+          </a>
+
+          <a href="https://www.linkedin.com/in/vipul-li" target="_blank" rel="noopener noreferrer">
           <motion.p variants={itemVariants}>
             <strong>Linkedin:</strong> <br />
             <motion.span
@@ -196,7 +200,9 @@ const Footer = () => {
               www.linkedin.com/in/vipul-li
             </motion.span>
           </motion.p>
+           </a>
         </motion.div>
+       
 
         <motion.div
           className="absolute -top-10 -left-10 w-6 h-6 bg-black/20 rounded-full"
